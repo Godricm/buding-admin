@@ -3,18 +3,14 @@ package org.buding.dto;
 import java.io.Serializable;
 import java.util.Date;
 
-public class BaseUser implements Serializable {
+public class BaseUserRole implements Serializable {
     private String id;
 
-    private String loginName;
+    private String orgId;
 
-    private String password;
+    private String roleId;
 
-    private String slat;
-
-    private String nickName;
-
-    private String avatar;
+    private String userId;
 
     private Integer isEnabled;
 
@@ -30,8 +26,6 @@ public class BaseUser implements Serializable {
 
     private String modifiedBy;
 
-    private String orgId;
-
     private static final long serialVersionUID = 1L;
 
     public String getId() {
@@ -42,44 +36,28 @@ public class BaseUser implements Serializable {
         this.id = id;
     }
 
-    public String getLoginName() {
-        return loginName;
+    public String getOrgId() {
+        return orgId;
     }
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
+    public void setOrgId(String orgId) {
+        this.orgId = orgId;
     }
 
-    public String getPassword() {
-        return password;
+    public String getRoleId() {
+        return roleId;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setRoleId(String roleId) {
+        this.roleId = roleId;
     }
 
-    public String getSlat() {
-        return slat;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setSlat(String slat) {
-        this.slat = slat;
-    }
-
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
-    }
-
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public Integer getIsEnabled() {
@@ -138,14 +116,6 @@ public class BaseUser implements Serializable {
         this.modifiedBy = modifiedBy;
     }
 
-    public String getOrgId() {
-        return orgId;
-    }
-
-    public void setOrgId(String orgId) {
-        this.orgId = orgId;
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -153,11 +123,9 @@ public class BaseUser implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", loginName=").append(loginName);
-        sb.append(", password=").append(password);
-        sb.append(", slat=").append(slat);
-        sb.append(", nickName=").append(nickName);
-        sb.append(", avatar=").append(avatar);
+        sb.append(", orgId=").append(orgId);
+        sb.append(", roleId=").append(roleId);
+        sb.append(", userId=").append(userId);
         sb.append(", isEnabled=").append(isEnabled);
         sb.append(", isDeleted=").append(isDeleted);
         sb.append(", remark=").append(remark);
@@ -165,7 +133,6 @@ public class BaseUser implements Serializable {
         sb.append(", createdBy=").append(createdBy);
         sb.append(", modifiedTime=").append(modifiedTime);
         sb.append(", modifiedBy=").append(modifiedBy);
-        sb.append(", orgId=").append(orgId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

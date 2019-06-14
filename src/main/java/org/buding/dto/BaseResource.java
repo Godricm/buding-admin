@@ -3,18 +3,24 @@ package org.buding.dto;
 import java.io.Serializable;
 import java.util.Date;
 
-public class BaseUser implements Serializable {
+public class BaseResource implements Serializable {
     private String id;
 
-    private String loginName;
+    private String code;
 
-    private String password;
+    private String name;
 
-    private String slat;
+    private String categoryType;
 
-    private String nickName;
+    private String permission;
 
-    private String avatar;
+    private String parentId;
+
+    private String router;
+
+    private Integer sortCode;
+
+    private String icon;
 
     private Integer isEnabled;
 
@@ -30,8 +36,6 @@ public class BaseUser implements Serializable {
 
     private String modifiedBy;
 
-    private String orgId;
-
     private static final long serialVersionUID = 1L;
 
     public String getId() {
@@ -42,44 +46,68 @@ public class BaseUser implements Serializable {
         this.id = id;
     }
 
-    public String getLoginName() {
-        return loginName;
+    public String getCode() {
+        return code;
     }
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    public String getPassword() {
-        return password;
+    public String getName() {
+        return name;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getSlat() {
-        return slat;
+    public String getCategoryType() {
+        return categoryType;
     }
 
-    public void setSlat(String slat) {
-        this.slat = slat;
+    public void setCategoryType(String categoryType) {
+        this.categoryType = categoryType;
     }
 
-    public String getNickName() {
-        return nickName;
+    public String getPermission() {
+        return permission;
     }
 
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
+    public void setPermission(String permission) {
+        this.permission = permission;
     }
 
-    public String getAvatar() {
-        return avatar;
+    public String getParentId() {
+        return parentId;
     }
 
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
+    }
+
+    public String getRouter() {
+        return router;
+    }
+
+    public void setRouter(String router) {
+        this.router = router;
+    }
+
+    public Integer getSortCode() {
+        return sortCode;
+    }
+
+    public void setSortCode(Integer sortCode) {
+        this.sortCode = sortCode;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 
     public Integer getIsEnabled() {
@@ -138,14 +166,6 @@ public class BaseUser implements Serializable {
         this.modifiedBy = modifiedBy;
     }
 
-    public String getOrgId() {
-        return orgId;
-    }
-
-    public void setOrgId(String orgId) {
-        this.orgId = orgId;
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -153,11 +173,14 @@ public class BaseUser implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", loginName=").append(loginName);
-        sb.append(", password=").append(password);
-        sb.append(", slat=").append(slat);
-        sb.append(", nickName=").append(nickName);
-        sb.append(", avatar=").append(avatar);
+        sb.append(", code=").append(code);
+        sb.append(", name=").append(name);
+        sb.append(", categoryType=").append(categoryType);
+        sb.append(", permission=").append(permission);
+        sb.append(", parentId=").append(parentId);
+        sb.append(", router=").append(router);
+        sb.append(", sortCode=").append(sortCode);
+        sb.append(", icon=").append(icon);
         sb.append(", isEnabled=").append(isEnabled);
         sb.append(", isDeleted=").append(isDeleted);
         sb.append(", remark=").append(remark);
@@ -165,7 +188,6 @@ public class BaseUser implements Serializable {
         sb.append(", createdBy=").append(createdBy);
         sb.append(", modifiedTime=").append(modifiedTime);
         sb.append(", modifiedBy=").append(modifiedBy);
-        sb.append(", orgId=").append(orgId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
