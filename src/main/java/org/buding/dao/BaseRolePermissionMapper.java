@@ -1,17 +1,7 @@
 package org.buding.dao;
 
 import org.buding.dto.BaseRolePermission;
+import org.buding.util.BaseMapper;
 
-public interface BaseRolePermissionMapper {
-    int deleteByPrimaryKey(String id);
-
-    int insert(BaseRolePermission record);
-
-    int insertSelective(BaseRolePermission record);
-
-    BaseRolePermission selectByPrimaryKey(String id);
-
-    int updateByPrimaryKeySelective(BaseRolePermission record);
-
-    int updateByPrimaryKey(BaseRolePermission record);
+public interface BaseRolePermissionMapper extends BaseMapper<BaseRolePermission> {
 }

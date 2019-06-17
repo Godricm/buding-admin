@@ -1,17 +1,7 @@
 package org.buding.dao;
 
 import org.buding.dto.BaseResource;
+import org.buding.util.BaseMapper;
 
-public interface BaseResourceMapper {
-    int deleteByPrimaryKey(String id);
-
-    int insert(BaseResource record);
-
-    int insertSelective(BaseResource record);
-
-    BaseResource selectByPrimaryKey(String id);
-
-    int updateByPrimaryKeySelective(BaseResource record);
-
-    int updateByPrimaryKey(BaseResource record);
+public interface BaseResourceMapper extends BaseMapper<BaseResource> {
 }

@@ -1,17 +1,7 @@
 package org.buding.dao;
 
 import org.buding.dto.BaseRole;
+import org.buding.util.BaseMapper;
 
-public interface BaseRoleMapper {
-    int deleteByPrimaryKey(String id);
-
-    int insert(BaseRole record);
-
-    int insertSelective(BaseRole record);
-
-    BaseRole selectByPrimaryKey(String id);
-
-    int updateByPrimaryKeySelective(BaseRole record);
-
-    int updateByPrimaryKey(BaseRole record);
+public interface BaseRoleMapper extends BaseMapper<BaseRole> {
 }
