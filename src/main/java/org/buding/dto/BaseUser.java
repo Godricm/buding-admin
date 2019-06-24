@@ -32,7 +32,7 @@ public class BaseUser {
     /**
      * 加盐
      */
-    private String slat;
+    private String salt;
 
     /**
      * 昵称
@@ -161,19 +161,19 @@ public class BaseUser {
     /**
      * 获取加盐
      *
-     * @return slat - 加盐
+     * @return salt - 加盐
      */
-    public String getSlat() {
-        return slat;
+    public String getSalt() {
+        return salt;
     }
 
     /**
      * 设置加盐
      *
-     * @param slat 加盐
+     * @param salt 加盐
      */
-    public void setSlat(String slat) {
-        this.slat = slat;
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 
     /**
