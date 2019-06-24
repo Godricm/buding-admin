@@ -9,7 +9,7 @@
     <result column="org_id" jdbcType="VARCHAR" property="orgId" />
     <result column="login_name" jdbcType="VARCHAR" property="loginName" />
     <result column="password" jdbcType="VARCHAR" property="password" />
-    <result column="slat" jdbcType="VARCHAR" property="slat" />
+    <result column="salt" jdbcType="VARCHAR" property="salt" />
     <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
     <result column="avatar" jdbcType="VARCHAR" property="avatar" />
     <result column="is_enabled" jdbcType="INTEGER" property="isEnabled" />
@@ -20,4 +20,7 @@
     <result column="modified_time" jdbcType="TIMESTAMP" property="modifiedTime" />
     <result column="modified_by" jdbcType="VARCHAR" property="modifiedBy" />
   </resultMap>
+  <select id="selectByLoginName" resultMap="org.buding.dao.BaseUserMapper.BaseResultMap">
+      select  * from base_user where login_name=#{loginName}
+  </select>
 </mapper>
